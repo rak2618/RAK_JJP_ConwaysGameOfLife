@@ -4,6 +4,7 @@
 In order to use our simulation, run the whole Graphics_V6d file into swiftforth. Then copy & paste all of the FINAL1 file into swiftforth and run.
 
 At the top of the FINAL1 file is a constant n, this can be changed, this is the grid size. 
+n should be changed in the FINAL1 file. there are also variables bmp-x-size and bmp-y-size which need to be set to n in the Graphics-V6d file.
 How to run a simulation:
 
     1) Resetting the array. 
