@@ -4,10 +4,11 @@
 In order to use our simulation, run the whole Graphics_V6d file into swiftforth. Then copy & paste all of the FINAL1 file into swiftforth and run.
 
 At the top of the FINAL1 file is a constant n, this can be changed, this is the grid size. 
-n should be changed in the FINAL1 file. there are also variables bmp-x-size and bmp-y-size which need to be set to n in the Graphics-V6d file.
+n should be changed in the FINAL1 file. there are also variables bmp-x-size and bmp-y-size which need to be set to n in the Graphics-V6d file before running it.
+
 How to run a simulation:
 
-    1) Resetting the array. 
+  1) Resetting the array. 
        The array used is a1. put a1 before a few functions that configure the starting formation for a1.
        These are reset0 , reset1 , reset01 . reset0 and reset1 fill the array with zeros and ones. reset01 will fill the array randomly with zeros or ones.
        
@@ -20,7 +21,7 @@ How to run a simulation:
        where x y is the coordinate you would like to turn into a one. 
        x starts at 1 and moves right, y starts at 1 and moves down. eg. (1,1) is the top left element of the array.
        
-    2) Viewing the array.
+  2) Viewing the array.
        There are a few functions that can be used to view the array.
        a) array_@ calls the value of a specific element (x,y) in the array
           of the form: x y a1 array_@
@@ -33,7 +34,7 @@ How to run a simulation:
           of the form: go-stretch
           
        
-    3) Running the simulation. There are a few functions that run the simulation:
+  3) Running the simulation. There are a few functions that run the simulation:
        a) skipto . use of the form:        no_of_frames a1 skipto
           This will run the simulation for no_of_frames frames and then run a bitmap afterwards to show the new configuation of a1. 
           This is the easiest way to run the simulation
