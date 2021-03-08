@@ -1,5 +1,5 @@
-200 constant n
-10000 constant frames
+20 constant n
+1000 constant frames
 
 variable neighbours 
 variable alivecells
@@ -109,20 +109,30 @@ CREATE SEED  111111111 ,
 
 : decide rot rot n n * 0 do dup I + c@
 			case
-			0 of 0 3 pick I + c! endof
-			1 of 0 3 pick I + c! endof
-
-			3 of 1 3 pick I + c! endof
-
-			4 of 0 3 pick I + c! endof
-			5 of 0 3 pick I + c! endof
-			6 of 0 3 pick I + c! endof
-			7 of 0 3 pick I + c! endof
-			8 of 0 3 pick I + c! endof
-			9 of 0 3 pick I + c! endof
 			
-			2 of 1 pick I + c@ 3 pick I + c! endof
+			
+			2 of 1 pick I + c@ 
+				case 
+				0 of 0 endof
+				1 of 1 endof
+				endcase
+				endof
+
+			0 of 0 endof
+			1 of 0 endof
+			3 of 1 endof
+
+			4 of 1 endof
+			5 of 0 endof
+			6 of 0 endof
+			7 of 0 endof
+			8 of 0 endof
+			9 of 0 endof
+
 			endcase
+			
+			3 pick I + c!
+			
 			loop drop drop drop ;
 
 
@@ -197,7 +207,7 @@ CREATE SEED  111111111 ,
   ;
 
 : skipto skip go-stretch ;
-
+: skipt skip ssa2 ;
 
 : countcells 0 alivecells ! 0 deadcells ! 
 	cr n 0 do n 0 do dup J n * I + + c@ 

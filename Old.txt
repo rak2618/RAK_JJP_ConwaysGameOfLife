@@ -1,0 +1,166 @@
+
+
+: line1  dup reset0
+1 n 2 /		 n 2 / 3 pick array_! drop ;
+
+: line2  dup reset0
+1 n 2 /		 n 2 / 3 pick array_!
+1 n 2 / 1 +	 n 2 / 3 pick array_! drop ;
+
+: line3  dup reset0
+1 n 2 /		 n 2 / 3 pick array_!
+1 n 2 / 1 +	 n 2 / 3 pick array_!
+1 n 2 / 1 -	 n 2 / 3 pick array_! drop ;
+
+: line4  dup reset0
+1 n 2 /		 n 2 / 3 pick array_!
+1 n 2 / 1 +	 n 2 / 3 pick array_!
+1 n 2 / 2 +	 n 2 / 3 pick array_!
+1 n 2 / 1 -	 n 2 / 3 pick array_! drop ;
+
+: line5  dup reset0
+1 n 2 /		 n 2 / 3 pick array_!
+1 n 2 / 1 +	 n 2 / 3 pick array_!
+1 n 2 / 2 +	 n 2 / 3 pick array_!
+1 n 2 / 1 -	 n 2 / 3 pick array_!
+1 n 2 / 2 -	 n 2 / 3 pick array_! drop ;
+
+: line6  dup reset0
+1 n 2 /		 n 2 / 3 pick array_!
+1 n 2 / 1 +	 n 2 / 3 pick array_!
+1 n 2 / 2 +	 n 2 / 3 pick array_!
+1 n 2 / 3 +	 n 2 / 3 pick array_!
+1 n 2 / 1 -	 n 2 / 3 pick array_!
+1 n 2 / 2 -	 n 2 / 3 pick array_! drop ;
+
+
+: line7  dup reset0
+1 n 2 /		 n 2 / 3 pick array_!
+1 n 2 / 1 +	 n 2 / 3 pick array_!
+1 n 2 / 2 +	 n 2 / 3 pick array_!
+1 n 2 / 3 +	 n 2 / 3 pick array_!
+1 n 2 / 1 -	 n 2 / 3 pick array_!
+1 n 2 / 2 -	 n 2 / 3 pick array_! 
+1 n 2 / 3 -	 n 2 / 3 pick array_! drop ;
+
+: line8  dup reset0
+1 n 2 /		 n 2 / 3 pick array_!
+1 n 2 / 1 +	 n 2 / 3 pick array_!
+1 n 2 / 2 +	 n 2 / 3 pick array_!
+1 n 2 / 3 +	 n 2 / 3 pick array_!
+1 n 2 / 4 +	 n 2 / 3 pick array_!
+1 n 2 / 1 -	 n 2 / 3 pick array_!
+1 n 2 / 2 -	 n 2 / 3 pick array_! 
+1 n 2 / 3 -	 n 2 / 3 pick array_! drop ;
+
+
+: line9  dup reset0
+1 n 2 /		 n 2 / 3 pick array_!
+1 n 2 / 1 +	 n 2 / 3 pick array_!
+1 n 2 / 2 +	 n 2 / 3 pick array_!
+1 n 2 / 3 +	 n 2 / 3 pick array_!
+1 n 2 / 4 +	 n 2 / 3 pick array_!
+1 n 2 / 1 -	 n 2 / 3 pick array_!
+1 n 2 / 2 -	 n 2 / 3 pick array_! 
+1 n 2 / 3 -	 n 2 / 3 pick array_! 
+1 n 2 / 4 -	 n 2 / 3 pick array_! drop ;
+
+
+
+: line10  dup reset0
+1 n 2 /		 n 2 / 3 pick array_!
+1 n 2 / 1 +	 n 2 / 3 pick array_!
+1 n 2 / 2 +	 n 2 / 3 pick array_!
+1 n 2 / 3 +	 n 2 / 3 pick array_!
+1 n 2 / 4 +	 n 2 / 3 pick array_!
+1 n 2 / 5 +	 n 2 / 3 pick array_!
+1 n 2 / 1 -	 n 2 / 3 pick array_!
+1 n 2 / 2 -	 n 2 / 3 pick array_! 
+1 n 2 / 3 -	 n 2 / 3 pick array_! 
+1 n 2 / 4 -	 n 2 / 3 pick array_! drop ;
+
+
+
+: line11  dup reset0
+1 n 2 /		 n 2 / 3 pick array_!
+1 n 2 / 1 +	 n 2 / 3 pick array_!
+1 n 2 / 2 +	 n 2 / 3 pick array_!
+1 n 2 / 3 +	 n 2 / 3 pick array_!
+1 n 2 / 4 +	 n 2 / 3 pick array_!
+1 n 2 / 5 +	 n 2 / 3 pick array_!
+1 n 2 / 1 -	 n 2 / 3 pick array_!
+1 n 2 / 2 -	 n 2 / 3 pick array_! 
+1 n 2 / 3 -	 n 2 / 3 pick array_! 
+1 n 2 / 4 -	 n 2 / 3 pick array_! 
+1 n 2 / 5 -	 n 2 / 3 pick array_! drop ;
+
+: line12 dup line11
+1 n 2 / 6 +	 n 2 / 3 pick array_! drop ;
+
+: line13 dup line11
+1 n 2 / 6 +	 n 2 / 3 pick array_! 
+1 n 2 / 6 -	 n 2 / 3 pick array_! drop ;
+
+: line14 dup line13
+1 n 2 / 7 +	 n 2 / 3 pick array_! drop ;
+
+: line15 dup line13
+1 n 2 / 7 +	 n 2 / 3 pick array_! 
+1 n 2 / 7 -	 n 2 / 3 pick array_! drop ;
+
+: line16 dup line15 
+1 n 2 / 8 +	 n 2 / 3 pick array_! drop ;
+
+: line17 dup line15 
+1 n 2 / 8 +	 n 2 / 3 pick array_! 
+1 n 2 / 8 -	 n 2 / 3 pick array_! drop ;
+
+: line18 dup line17 
+1 n 2 / 9 +	 n 2 / 3 pick array_! drop ;
+
+: line19 dup line17 
+1 n 2 / 9 +	 n 2 / 3 pick array_! 
+1 n 2 / 9 -	 n 2 / 3 pick array_! drop ;
+
+: line20 dup line19 
+1 n 2 / 10 +	 n 2 / 3 pick array_! drop ;
+
+: line21 dup line19 
+1 n 2 / 10 +	 n 2 / 3 pick array_! 
+1 n 2 / 10 -	 n 2 / 3 pick array_! drop ;
+
+: line22 dup line21 
+1 n 2 / 11 +	 n 2 / 3 pick array_! drop ;
+
+: line23 dup line21
+1 n 2 / 11 +	 n 2 / 3 pick array_! 
+1 n 2 / 11 -	 n 2 / 3 pick array_! drop ;
+
+: line24 dup line23 
+1 n 2 / 12 +	 n 2 / 3 pick array_! drop ;
+
+: line25 dup line23 
+1 n 2 / 12 +	 n 2 / 3 pick array_! 
+1 n 2 / 12 -	 n 2 / 3 pick array_! drop ;
+
+: line26 dup line25 
+1 n 2 / 13 +	 n 2 / 3 pick array_! drop ;
+
+: line27 dup line25
+1 n 2 / 13 +	 n 2 / 3 pick array_! 
+1 n 2 / 13 -	 n 2 / 3 pick array_! drop ;
+
+: line28 dup line27 
+1 n 2 / 14 +	 n 2 / 3 pick array_! drop ;
+
+: line29 dup line27
+1 n 2 / 14 +	 n 2 / 3 pick array_! 
+1 n 2 / 14 -	 n 2 / 3 pick array_! drop ;
+
+: line30 dup line29 
+1 n 2 / 15 +	 n 2 / 3 pick array_! drop ;
+
+: line31 dup line29 
+1 n 2 / 15 +	 n 2 / 3 pick array_! 
+1 n 2 / 15 -	 n 2 / 3 pick array_! drop ;
+

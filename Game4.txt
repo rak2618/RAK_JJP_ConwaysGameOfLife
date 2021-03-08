@@ -112,15 +112,15 @@ CREATE SEED  111111111 ,
 			0 of 0 3 pick I + c! endof
 			1 of 0 3 pick I + c! endof
 
-			3 of 1 3 pick I + c! endof
 
-			4 of 0 3 pick I + c! endof
+			4 of 1 3 pick I + c! endof
 			5 of 0 3 pick I + c! endof
 			6 of 0 3 pick I + c! endof
 			7 of 0 3 pick I + c! endof
 			8 of 0 3 pick I + c! endof
 			9 of 0 3 pick I + c! endof
 			
+			3 of 1 pick I + c@ 3 pick I + c! endof
 			2 of 1 pick I + c@ 3 pick I + c! endof
 			endcase
 			loop drop drop drop ;

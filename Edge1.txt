@@ -1,4 +1,4 @@
-200 constant n
+30 constant n
 10000 constant frames
 
 variable neighbours 
@@ -11,7 +11,7 @@ n n * allocate drop constant B1
 n n * allocate drop constant B2
 frames 1 + 4 * allocate drop constant livecells
 
-CREATE SEED  111111111 ,
+CREATE SEED  123445629 ,
 
 : Rnd ( n -- rnd )   
    SEED              
@@ -22,6 +22,62 @@ CREATE SEED  111111111 ,
    ELSE - 2147483647 +  
    THEN  DUP R> !
    SWAP MOD ;
+
+: rnd10 10 rnd 
+	0 <= if 1 
+	else 0 
+	then ;
+
+: reset10 n n * 0 do dup rnd10 swap I + C! loop drop ;
+
+: rnd20 10 rnd 
+	1 <= if 1 
+	else 0 
+	then ;
+
+: reset20 n n * 0 do dup rnd20 swap I + C! loop drop ;
+
+: rnd30 10 rnd 
+	2 <= if 1 
+	else 0 
+	then ;
+
+: reset30 n n * 0 do dup rnd30 swap I + C! loop drop ;
+
+: rnd40 10 rnd 
+	3 <= if 1 
+	else 0 
+	then ;
+
+: reset40 n n * 0 do dup rnd40 swap I + C! loop drop ;
+
+: rnd60 10 rnd 
+	5 <= if 1 
+	else 0 
+	then ;
+
+: reset60 n n * 0 do dup rnd60 swap I + C! loop drop ;
+
+: rnd70 10 rnd 
+	6 <= if 1 
+	else 0 
+	then ;
+
+: reset70 n n * 0 do dup rnd70 swap I + C! loop drop ;
+
+: rnd80 10 rnd 
+	7 <= if 1 
+	else 0 
+	then ;
+
+: reset80 n n * 0 do dup rnd80 swap I + C! loop drop ;
+
+: rnd90 10 rnd 
+	8 <= if 1 
+	else 0 
+	then ;
+
+: reset90 n n * 0 do dup rnd90 swap I + C! loop drop ;
 
 
 
@@ -36,61 +92,15 @@ CREATE SEED  111111111 ,
 
 
 
+
 : counts swap
 	n n * 0 do 0 neighbours !
-		
-		
-		I n mod 0= if 	
-				I 0= if dup I + 1 + c@ neighbours @ + neighbours !		
-					dup I + n + c@ neighbours @ + neighbours !		
-					dup I + n + 1 + c@ neighbours @ + neighbours ! 
-				else 
-				I n 1 - n * = if dup I + n - c@ neighbours @ + neighbours !		
-					  	 dup I + n - 1 + c@ neighbours @ + neighbours !		
-					  	 dup I + 1 + c@ neighbours @ + neighbours !
 
-				else
-				dup I + n - c@ neighbours @ + neighbours !		
-				dup I + n - 1 + c@ neighbours @ + neighbours !		
-				dup I + 1 + c@ neighbours @ + neighbours !		
-				dup I + n + c@ neighbours @ + neighbours !		
-				dup I + n + 1 + c@ neighbours @ + neighbours !	then then
- 			else
+		I n mod 0= if   	3 neighbours ! else
+		I 1 + n mod 0= if 	3 neighbours ! else
+		I n <= if		3 neighbours ! else
+		I n n * n - >= if       3 neighbours ! else 
 
-
-
-		I 1 + n mod 0= if 	
-				I n 1 - = if dup I + 1 - c@ neighbours @ + neighbours !		
-					  dup I + n + 1 - c@ neighbours @ + neighbours !		
-					  dup I + n + c@ neighbours @ + neighbours ! 
-				else 
-				I n n * 1 - = if dup I + n - 1 - c@ neighbours @ + neighbours !		
-					  dup I + n - c@ neighbours @ + neighbours !		
-					  dup I + 1 - c@ neighbours @ + neighbours !
-
-					else
-					dup I + n - 1 - c@ neighbours @ + neighbours !  	
-					dup I + n - c@ neighbours @ + neighbours !		
-					dup I + 1 - c@ neighbours @ + neighbours !		
-					dup I + n + 1 - c@ neighbours @ + neighbours !		
-					dup I + n + c@ neighbours @ + neighbours ! then then		
- 			else
-
-		I n <= if 	dup I + 1 - c@ neighbours @ + neighbours !		
-		 		dup I + 1 + c@ neighbours @ + neighbours !		
-				dup I + n + 1 - c@ neighbours @ + neighbours !		
-				dup I + n + c@ neighbours @ + neighbours !		
-				dup I + n + 1 + c@ neighbours @ + neighbours !		
-			else
-
-		I n n * n - >= if 	dup I + n - 1 - c@ neighbours @ + neighbours !  	
-				dup I + n - c@ neighbours @ + neighbours !		
-				dup I + n - 1 + c@ neighbours @ + neighbours !		
-				dup I + 1 - c@ neighbours @ + neighbours !		
-				dup I + 1 + c@ neighbours @ + neighbours !		
-
-			else
-		
 
 		dup I + n - 1 - c@ neighbours @ + neighbours !  	
 		dup I + n - c@ neighbours @ + neighbours !		
@@ -103,7 +113,10 @@ CREATE SEED  111111111 ,
 		
 		then then then then
 
+
 		swap dup I + neighbours @ swap C! swap 0 neighbours ! loop drop drop ;
+
+
 
 
 
